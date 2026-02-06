@@ -191,23 +191,24 @@ body {
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 8vmin;
-  height: 11vmin;
-  border-radius: 51% 49% 47% 53%/44% 45% 55% 69%;
-  background-color: #e6f331;
-  background-image: linear-gradient(to top, #e6f331, #e6f331);
+  width: 9vmin; /* Un poquito más anchos */
+  height: 13vmin; /* Más altos */
+  border-radius: 50% 50% 50% 50% / 80% 80% 20% 20%; /* Forma de tulipán cerrado */
+  background-color: #ff3366; /* Color rosado/rojo típico de tulipán */
+  background-image: linear-gradient(to top, #ff3366, #ff85a2);
   transform-origin: bottom center;
-  opacity: 0.9;
-  box-shadow: inset 0 0 2vmin rgba(255, 255, 255, 0.5);
+  opacity: 0.95;
+  box-shadow: inset 0 0 2vmin rgba(0, 0, 0, 0.1);
 }
 .flower__leaf--1 {
-  transform: translate(-10%, 1%) rotateY(40deg) rotateX(-50deg);
+  transform: translate(-10%, 2%) rotateZ(15deg) rotateX(-20deg);
 }
 .flower__leaf--2 {
-  transform: translate(-50%, -4%) rotateX(40deg);
+  transform: translate(-50%, -2%) rotateX(-10deg);
+  z-index: 2; /* El pétalo central queda al frente */
 }
 .flower__leaf--3 {
-  transform: translate(-90%, 0%) rotateY(45deg) rotateX(50deg);
+  transform: translate(-90%, 2%) rotateZ(-15deg) rotateX(20deg);
 }
 .flower__leaf--4 {
   width: 8vmin;
@@ -215,18 +216,12 @@ body {
   transform-origin: bottom left;
   border-radius: 4vmin 10vmin 4vmin 4vmin;
   transform: translate(0%, 18%) rotateX(70deg) rotate(-43deg);
-  background-image: linear-gradient(to top, #e6f331, #e6f331);
+  background-image: linear-gradient(to top, #ff3366, #ff85a2);
   z-index: 1;
   opacity: 0.8;
 }
 .flower__white-circle {
-  position: absolute;
-  left: -3.5vmin;
-  top: -3vmin;
-  width: 9vmin;
-  height: 4vmin;
-  border-radius: 50%;
-  background-color: #fff;
+  display: none;
 }
 .flower__white-circle::after {
   content: "";
@@ -1831,7 +1826,7 @@ body {
 @-webkit-keyframes love-burst {
   50%,
   100% {
-    box-shadow: inset 0 0 0 0 rgb(1, 175, 73);
+    box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0.9);
     -webkit-transform: translate(0, 0) scale(1);
     transform: translate(0, 0) scale(1);
   }
@@ -1840,7 +1835,7 @@ body {
 @keyframes love-burst {
   50%,
   100% {
-    box-shadow: inset 0 0 0 0 rgb(18, 226, 129);
+    box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0.9);
     -webkit-transform: translate(0, 0) scale(1);
     transform: translate(0, 0) scale(1);
   }
@@ -1972,22 +1967,22 @@ body {
 
 @-webkit-keyframes love {
   50% {
-    fill: rgb(253, 66, 19);
+    fill: rgb(255, 158, 134);
     opacity: 1;
   }
 }
 
 @keyframes love {
   50% {
-    fill: rgb(253, 93, 19);
+    fill: rgb(255, 158, 134);
     opacity: 1;
   }
 }
 
-/* --- ESTILOS AÑADIDOS--- */
+/* --- ESTILOS DE INTERFAZ ACTUALIZADOS --- */
 .ui-overlay {
   position: fixed;
-  top: 20%;
+  top: 20%; /* Un poco más abajo para que se vea mejor */
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;

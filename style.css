@@ -1983,3 +1983,78 @@ body {
     opacity: 1;
   }
 }
+
+/* --- ESTILOS AÑADIDOS--- */
+.ui-overlay {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  text-align: center;
+  width: 90%;
+  font-family: 'Arial', sans-serif;
+}
+
+.question-text {
+  color: white;
+  font-size: 2.2rem;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  margin-bottom: 25px;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 35px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px; /* Más redondeados */
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.btn-si {
+  background-color: #ff3366;
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 51, 102, 0.4);
+}
+
+.btn-no {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+.retry-msg {
+  color: #ffb3c1;
+  margin-top: 20px;
+  font-size: 1rem;
+  display: none;
+}
+
+.message-container {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.final-text {
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden { display: none; }

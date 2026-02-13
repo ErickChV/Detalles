@@ -1,1 +1,1 @@
-Detalle ERICK, programador enamorado:))
+Detalles de un programador:))
